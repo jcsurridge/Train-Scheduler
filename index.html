@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Data Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    ​
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    ​
+    <!-- Specific Firebase products we want -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+</head>
+​
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="jumbotron jumbotron-fluid text-center bg-dark text-light">
+                    <div class="container">
+                        <h3>Train Scheduler</h3>
+                        <h5>Lets you know the when next expected train arrives given current time</h5>
+                    </div>
+                </div>
+                <div class="card text-white my-3">
+                    <div class="card-header bg-light text-secondary font-weight-bold">Current Employee</div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (Min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card text-white my-3">
+                    <div class="card-header  bg-light text-secondary font-weight-bold">Train Name</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="name" class="text-dark">Destination</label>
+                                <input type="text" class="form-control" id="destination" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="role" class="text-dark">Train Name</label>
+                                <input type="text" class="form-control" id="train" placeholder="">
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-group">
+                                <label for="start-date" class="text-dark">Frequency (min)</label>
+                                <input type="text" class="form-control" id="frequency" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="start-date" class="text-dark">First Train Time(HH:mm - Military
+                                    Time)</label>
+                                <input type="text" class="form-control" id="time" placeholder="">
+                            </div>
+
+                            <button class="btn btn-primary" id="submit" type="button">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    ​
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="js.js"></script>
+
+</body>
+​
+
+</html>
